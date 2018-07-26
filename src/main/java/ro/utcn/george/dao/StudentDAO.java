@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import ro.utcn.george.pojo.StudentPojo;
 
 @Repository
-public interface StudentDAO extends JpaRepository<StudentPojo, Integer>{	
+public interface StudentDAO extends JpaRepository<StudentPojo, Integer>{
+
+
 
 }

@@ -17,4 +17,36 @@ public class StudentBL {
 	public List<StudentPojo> listAllStudents() {
 		return studentService.listAllStudents();
 	}
-}
+	
+	
+	/*public StudentPojo findById(Integer id) {
+		try {
+			return studentService.findById(id);
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}*/
+	
+	public StudentPojo findStudentById(Integer studentId) {
+		return studentService.findStudentById(studentId);
+	}
+	
+	
+	public void deleteById(Integer id) {
+		
+		studentService.deleteById(id);
+		
+	}
+	
+	public StudentPojo save(StudentPojo student) {
+		return studentService.save(student);
+	}
+	
+	
+	
+	
+	}
+	
+
