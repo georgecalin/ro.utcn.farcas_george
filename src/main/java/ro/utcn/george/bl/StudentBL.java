@@ -45,7 +45,9 @@ public class StudentBL {
 	}
 	
 	
-	
+	public void updateStudent(Integer id,StudentPojo studentdetails) {
+		studentService.updateStudent(id,studentdetails);
+	}
 	
 	}
 	

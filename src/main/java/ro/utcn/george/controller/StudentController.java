@@ -52,6 +52,15 @@ public class StudentController {
 		return studentBL.save(student);
 	}
 	
+	@PutMapping("/students/{id}")
+	public void updateStudent(@PathVariable(value = "id") Integer id,@Valid @RequestBody StudentPojo studentDetails) {
+		studentBL.updateStudent(id, studentDetails);
+		
+		
+		
+	}
+	
+	
 }
 	
 

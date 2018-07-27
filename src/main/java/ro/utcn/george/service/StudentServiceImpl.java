@@ -39,6 +39,15 @@ public class StudentServiceImpl implements StudentService	 {
 		
 	}
 	
+	@Override
+	public void updateStudent(Integer id,StudentPojo studentDetails){
+		StudentPojo student = studentDAO.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student", null,id));
+	    		
+		student.setFirstName(studentDetails.getFirstName());
+		studentDAO.save(student);
+	}
+	
+	
 }
     
 
